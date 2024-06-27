@@ -41,7 +41,7 @@ class CommentArea extends Component {
         ) : (
           <Alert bg="info">Non ci sono ancora commenti</Alert>
         )}
-        <AddComment />
+        <AddComment asin={this.props.asin} />
       </div>
     );
   }
