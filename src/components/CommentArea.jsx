@@ -1,6 +1,7 @@
 import { Component } from "react";
 import CommentList from "./CommentList";
 import { Alert } from "react-bootstrap";
+import AddComment from "./AddComment";
 
 class CommentArea extends Component {
   state = {
@@ -40,6 +41,7 @@ class CommentArea extends Component {
         ) : (
           <Alert bg="info">Non ci sono ancora commenti</Alert>
         )}
+        <AddComment />
       </div>
     );
   }
