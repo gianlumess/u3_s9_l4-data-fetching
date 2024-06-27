@@ -6,11 +6,15 @@ class SingleBook extends Component {
     selected: false,
   };
 
+  handleToggle = () => {
+    this.setState({ selected: true });
+  };
+
   render() {
     const { book } = this.props;
 
     return (
-      <Card>
+      <Card onClick={(e) => this.handleToggle()}>
         <Card.Img variant="top" src={book.img} />
         <Card.Body>
           <Card.Title>{book.title}</Card.Title>
