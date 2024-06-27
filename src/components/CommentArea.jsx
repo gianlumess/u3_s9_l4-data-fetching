@@ -1,4 +1,5 @@
 import { Component } from "react";
+import CommentList from "./CommentList";
 
 class CommentArea extends Component {
   state = {
@@ -6,7 +7,7 @@ class CommentArea extends Component {
   };
   fetchReviews = () => {
     fetch("https://striveschool-api.herokuapp.com/api/comments/", {
-      Headers: {
+      headers: {
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZiZmZmNDdjMjM5YzAwMTUyZjRiNzQiLCJpYXQiOjE3MTgzNTM5MDgsImV4cCI6MTcxOTU2MzUwOH0.YxOTllrumawWZJ4LtdXWOHBZKu9J2pg4-y4aQ09JeiQ",
       },
@@ -29,7 +30,7 @@ class CommentArea extends Component {
     this.fetchReviews();
   }
   render() {
-    return;
+    return <CommentList />;
   }
 }
 export default CommentArea;
