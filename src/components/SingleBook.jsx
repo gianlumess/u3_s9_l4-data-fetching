@@ -23,7 +23,7 @@ class SingleBook extends Component {
             <u>Price:</u> <Badge>{book.price}€</Badge>
           </Card.Text>
         </Card.Body>
-        {this.state.selected && <CommentArea />}
+        {this.state.selected && <CommentArea asin={book.asin} />}
       </Card>
     );
   }

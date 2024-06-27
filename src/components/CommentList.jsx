@@ -1,9 +1,12 @@
 import { ListGroup } from "react-bootstrap";
+import SingleComment from "./SingleComment";
 
 const CommentList = (props) => {
   return (
     <ListGroup>
-      <ListGroup.Item>Cras justo odio</ListGroup.Item>
+      {props.reviews.map((review) => (
+        <SingleComment key={review._id} recensione={review} />
+      ))}
     </ListGroup>
   );
 };
