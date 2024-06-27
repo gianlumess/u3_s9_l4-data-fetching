@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Badge, Card } from "react-bootstrap";
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -22,6 +23,7 @@ class SingleBook extends Component {
             <u>Price:</u> <Badge>{book.price}€</Badge>
           </Card.Text>
         </Card.Body>
+        {this.state.selected && <CommentArea />}
       </Card>
     );
   }
